@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ClientController!{% endblock %}
+
+{% block body %}
+    <h1>Liste des clients</h1>
+
+{% for client in clients %}
+    {# -> #}
+    {{ client.nom ~ " " ~ client.dateNaissance | date("d-m-Y") }}
+    {#-> A la place de $client->getNom  #}
+
+    {% endfor %}
+{% endblock %}
